@@ -3,8 +3,8 @@
 import { ArrowLeftIcon, ArrowRightIcon } from '@heroicons/react/24/outline';
 import clsx from 'clsx';
 import Link from 'next/link';
-import { generatePagination } from '@/app/lib/utils';
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export default function Pagination({ totalPages }: { totalPages: number }) {
   // NOTE: comment in this code when you get to this point in the course
 
@@ -12,9 +12,9 @@ export default function Pagination({ totalPages }: { totalPages: number }) {
 
   return (
     <>
-      {/* NOTE: comment in this code when you get to this point in the course */}
+      { /* NOTE: comment in this code when you get to this point in the course */ }
 
-      {/* <div className="inline-flex">
+      { /* <div className="inline-flex">
         <PaginationArrow
           direction="left"
           href={createPageURL(currentPage - 1)}
@@ -47,11 +47,12 @@ export default function Pagination({ totalPages }: { totalPages: number }) {
           href={createPageURL(currentPage + 1)}
           isDisabled={currentPage >= totalPages}
         />
-      </div> */}
+      </div> */ }
     </>
   );
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function PaginationNumber({
   page,
   href,
@@ -75,14 +76,15 @@ function PaginationNumber({
   );
 
   return isActive || position === 'middle' ? (
-    <div className={className}>{page}</div>
+    <div className={ className }>{ page }</div>
   ) : (
-    <Link href={href} className={className}>
-      {page}
+    <Link href={ href } className={ className }>
+      { page }
     </Link>
   );
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function PaginationArrow({
   href,
   direction,
@@ -102,18 +104,17 @@ function PaginationArrow({
     },
   );
 
-  const icon =
-    direction === 'left' ? (
-      <ArrowLeftIcon className="w-4" />
-    ) : (
-      <ArrowRightIcon className="w-4" />
-    );
+  const icon = direction === 'left' ? (
+    <ArrowLeftIcon className="w-4" />
+  ) : (
+    <ArrowRightIcon className="w-4" />
+  );
 
   return isDisabled ? (
-    <div className={className}>{icon}</div>
+    <div className={ className }>{ icon }</div>
   ) : (
-    <Link className={className} href={href}>
-      {icon}
+    <Link className={ className } href={ href }>
+      { icon }
     </Link>
   );
 }

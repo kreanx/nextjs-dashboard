@@ -80,7 +80,7 @@
     ],
     // https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/newline-after-import.md
     "import/newline-after-import": [
-      "error",
+      "off",
       {
         "count": 2
       }
@@ -244,6 +244,7 @@
         "allowExpressions": true
       }
     ],
+    "react/self-closing-comp": "off",
     // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-curly-spacing.md
     "react/jsx-curly-spacing": [
       "warn",
