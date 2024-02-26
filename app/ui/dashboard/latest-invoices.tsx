@@ -5,6 +5,7 @@ import { LatestInvoice } from '@/app/lib/definitions';
 
 
 export default async function LatestInvoices({
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   latestInvoices,
 }: {
   latestInvoices: LatestInvoice[];
